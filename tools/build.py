@@ -133,6 +133,9 @@ def decode_cfemail(hexstr):
     return "".join(chr(int(hexstr[i:i + 2], 16) ^ k) for i in range(2, len(hexstr), 2))
 
 
+# "Lawrence Sternberg" or "LJ Sternberg", but not the already-full Lawrence "LJ" Sternberg.
+NAME_RE = re.compile(r'(?<![\w"\u201c\u201d])(?:Lawrence|LJ)\s+Sternberg')
+
 FORM_NAMES = {"NEWSLETTER_SIGNUP": "newsletter", "CONTACT_INQUIRY": "contact", "HOME_VALUATION": "home-valuation"}
 
 
@@ -233,6 +236,20 @@ def transform(src):
     head = soup.head
     tag = soup.new_tag("script", src="/js/site.js")
     head.insert(0, tag)
+
+    # Lawrence asked (2026-11-04) that his full name always read Lawrence "LJ" Sternberg.
+    # First-name-only uses ("Work With Lawrence") and client quotes stay as written.
+    def full_name(text):
+        return NAME_RE.sub('Lawrence "LJ" Sternberg', text)
+    for node in soup.find_all(string=NAME_RE):
+        if node.parent is not None and node.parent.name not in ("script", "style") \
+                and not isinstance(node, (bs4.Comment, bs4.Doctype)):
+            node.replace_with(full_name(str(node)))
+    for el in soup.find_all(True):
+        for attr in ("alt", "title", "content", "aria-label", "value", "placeholder"):
+            v = el.get(attr)
+            if isinstance(v, str) and NAME_RE.search(v):
+                el[attr] = full_name(v)
 
     # Keep canonical/Open Graph URLs absolute (they must name the real domain).
     for el in soup.select('link[rel=canonical], meta[content*="ljresidentialgroup.com"]'):
