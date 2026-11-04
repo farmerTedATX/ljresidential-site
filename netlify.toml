@@ -1,0 +1,19 @@
+[build]
+  publish = "site"
+  command = ""
+
+# Home search was dropped in the rebuild; send old links to the home page.
+[[redirects]]
+  from = "/home-search/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/terms-and-conditions"
+  status = 301
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
