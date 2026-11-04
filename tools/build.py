@@ -210,6 +210,12 @@ def transform(src):
     for form in soup.select('form[data-type="contact-form"]'):
         src_in = form.find("input", attrs={"name": "source"})
         name = FORM_NAMES.get(src_in.get("value") if src_in else "", "contact")
+        # Netlify keeps only the fields of the first form it sees under a name, so variants with
+        # different fields get their own inbox.
+        if name == "contact" and form.find(attrs={"name": "tourTime"}):
+            name = "schedule-showing"
+        elif name == "contact" and not form.find(attrs={"name": "message"}):
+            name = "quick-contact"
         form["name"] = name
         form["method"] = "POST"
         form["data-netlify"] = "true"
