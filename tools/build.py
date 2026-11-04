@@ -192,6 +192,11 @@ def transform(src):
         if sec.select_one(".neighborhood-map") or sec.get_text(" ", strip=True).startswith("Start Your Home Search"):
             sec.decompose()
 
+    # The hero video has no audio track, so its speaker (mute) icon does nothing. Hidden at
+    # Lawrence's request (2026-11-04).
+    for el in soup.select(".mute-icon__container"):
+        el.decompose()
+
     # "Powered by Luxury Presence" credit.
     for a in soup.select('a[href^="https://www.luxurypresence.com"]'):
         p = a.parent
