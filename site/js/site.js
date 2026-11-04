@@ -104,64 +104,34 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 })();
-// Forms: Luxury Presence's own script posts leads to its API. This handler runs first (capture
-// phase), stops that, and posts the same fields to Netlify Forms instead. It then shows the
-// same success state the original script used (.success class, un-hide .success elements).
-(function () {
-  function encode(form) {
-    var data = new FormData(form);
+// Forms: Luxury Presence's script sends leads to its own API, reached both from the submit event
+// and from buttons that call contactForms.submitForm() directly. Rather than intercept each
+// path, swap out its one network step (_submitLeadRequest) so the same fields go to Netlify
+// Forms. Everything else (validation, honeypot, success and error states) stays the original.
+document.addEventListener('DOMContentLoaded', function () {
+  var cf = window.luxuryPresence && window.luxuryPresence.contactForms;
+  if (!cf) return;
+  var lastForm = null;
+  var build = cf._buildSubmissionData;
+  cf._buildSubmissionData = function (values, fields, form) {
+    lastForm = form;
+    return build.apply(this, arguments);
+  };
+  cf._submitLeadRequest = function () {
+    var form = lastForm;
     var params = new URLSearchParams();
-    data.forEach(function (v, k) { if (typeof v === 'string') params.append(k, v); });
-    return params.toString();
-  }
-
-  function showSuccess(form) {
-    var delay = Number(form.dataset.delay) || 2000;
-    form.classList.remove('loading', 'error');
-    form.classList.add('success');
-    form.querySelectorAll('.success').forEach(function (el) { el.classList.remove('hide'); });
-    form.dispatchEvent(new Event('formsubmitted'));
-    setTimeout(function () {
-      if (window.lpUI) {
-        try { window.lpUI.hideClosestModal(form); } catch (e) {}
-        try { window.lpUI.sideMenuHide(); } catch (e) {}
-      }
-      form.reset();
-      form.querySelectorAll('.success').forEach(function (el) { el.classList.add('hide'); });
-      form.classList.remove('success');
-    }, delay);
-  }
-
-  function showError(form) {
-    form.classList.remove('loading');
-    form.classList.add('error');
-    var msg = form.querySelector('.submission-error-message');
-    if (!msg) {
-      msg = document.createElement('div');
-      msg.className = 'submission-error-message';
-      msg.setAttribute('role', 'alert');
-      form.appendChild(msg);
-    }
-    msg.textContent = 'Something went wrong. Please try again, or email lj@ljresidentialgroup.com.';
-    msg.style.display = 'block';
-  }
-
-  document.addEventListener('submit', function (e) {
-    var form = e.target;
-    if (!form.matches || !form.matches('form[data-netlify]')) return;
-    e.preventDefault();
-    e.stopImmediatePropagation();
-    if (form.classList.contains('loading')) return;
-    var honey = form.querySelector('[name="middleName"]');
-    if (honey && honey.value) return;
-    form.classList.add('loading');
-    fetch('/', {
+    new FormData(form).forEach(function (v, k) { if (typeof v === 'string') params.append(k, v); });
+    return fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode(form)
+      body: params.toString()
     }).then(function (r) {
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      showSuccess(form);
-    }).catch(function () { showError(form); });
-  }, true);
-})();
+      if (!r.ok) {
+        var err = new Error('HTTP ' + r.status);
+        err.userMessage = 'Something went wrong. Please try again, or email lj@ljresidentialgroup.com.';
+        throw err;
+      }
+      return {};
+    });
+  };
+});
