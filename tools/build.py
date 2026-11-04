@@ -292,6 +292,24 @@ def transform(src):
     # Turn off Luxury Presence's analytics event bus and consent banner.
     out = re.sub(r"(setEventBus\(\{\s*enabled:\s*)true", r"\1false", out)
     out = re.sub(r"window\.luxuryPresence\.consent\.initialize\([^;]*\);", "", out)
+    return scrub(out)
+
+
+def scrub(out):
+    """Remove the old platform's name and service addresses from the page code.
+
+    The page scripts keep working: the global object they share is renamed everywhere at once
+    (site.js uses the new name), and the service URLs they were configured with are never
+    called here (forms go to Netlify, API answers come from /data/api.json), so they become ""."""
+    out = re.sub(r"https://[a-z0-9.-]*luxurypresence\.com[^\"'\s]*", "", out)
+    # One background photo on the old host's image CDN is gone (404 on the old site too); the
+    # gradient under it is what visitors see either way, so drop the dead layer.
+    out = re.sub(r",\s*url\('https://res\.cloudinary\.com/luxuryp/[^']*'\)", "", out)
+    out = out.replace("LuxuryPresenceEventBus", "SiteEventBus").replace("luxuryPresence", "siteApp")
+    out = out.replace("/* Initialize Luxury Presence SDK */", "/* Initialize site scripts */")
+    leftover = re.findall(r"(?i).{0,40}(?:luxury ?presence|cloudinary\.com/luxuryp).{0,40}", out)
+    if leftover:
+        raise SystemExit("old platform name still in output: %r" % leftover[:3])
     return out
 
 

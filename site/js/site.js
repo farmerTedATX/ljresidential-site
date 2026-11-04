@@ -1,6 +1,6 @@
 // Site-wide helpers for the static rebuild.
 
-// Home valuation: the original step 1 waits for Google Maps (keyed by Luxury Presence) and only
+// Home valuation: the original step 1 waits for Google Maps (keyed by the old host) and only
 // unlocks "Continue" after a Places pick. With no Maps key here, give it a tiny stand-in so the
 // form works: any address with a number and a street name counts as valid; the map stays hidden.
 document.addEventListener('DOMContentLoaded', function () {
@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
     Map: Map, Marker: Marker, Geocoder: Geocoder, GeocoderStatus: { OK: 'OK' },
     places: { Autocomplete: Autocomplete }, event: { trigger: noop, clearListeners: noop }
   } };
-  var lp = window.luxuryPresence;
+  var lp = window.siteApp;
   if (lp && lp.mapApiLoader) lp.mapApiLoader.load = function () { return Promise.resolve(); };
   if (lp && lp.redirects) lp.redirects.checkHstRedirect = function () { return false; };
 });
 
-// API replay: the original page scripts ask Luxury Presence's servers for testimonials, featured
+// API replay: the original page scripts ask the old host's servers for testimonials, featured
 // properties, and session info. Those answers were recorded at migration time into
 // /data/api.json, and are served from there so the pages render the same with no backend.
 (function () {
@@ -110,12 +110,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 })();
-// Forms: Luxury Presence's script sends leads to its own API, reached both from the submit event
+// Forms: The page script sends leads to its own API, reached both from the submit event
 // and from buttons that call contactForms.submitForm() directly. Rather than intercept each
 // path, swap out its one network step (_submitLeadRequest) so the same fields go to Netlify
 // Forms. Everything else (validation, honeypot, success and error states) stays the original.
 document.addEventListener('DOMContentLoaded', function () {
-  var cf = window.luxuryPresence && window.luxuryPresence.contactForms;
+  var cf = window.siteApp && window.siteApp.contactForms;
   if (!cf) return;
   var lastForm = null;
   var build = cf._buildSubmissionData;
