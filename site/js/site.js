@@ -2,7 +2,7 @@
 
 // Home valuation: the original step 1 waits for Google Maps (keyed by Luxury Presence) and only
 // unlocks "Continue" after a Places pick. With no Maps key here, give it a tiny stand-in so the
-// form works: any address that starts with a house number counts as valid; the map stays hidden.
+// form works: any address with a number and a street name counts as valid; the map stays hidden.
 document.addEventListener('DOMContentLoaded', function () {
   if (!document.getElementById('home-valuation-map')) return;
   var style = document.createElement('style');
@@ -10,16 +10,22 @@ document.addEventListener('DOMContentLoaded', function () {
   document.head.appendChild(style);
   function noop() {}
   function Autocomplete(input) {
-    var listeners = [], timer, self = this;
+    var listeners = [], self = this;
+    function valid() {
+      var v = input.value.trim();
+      return v.length >= 6 && /\d/.test(v) && /[a-z]{2,}/i.test(v);
+    }
     this.getPlace = function () {
-      var ok = /^\s*\d+\s+\S+/.test(input.value);
+      var ok = valid();
       return { address_components: ok ? [{ types: ['street_number'] }] : [], geometry: ok ? { location: {} } : null };
     };
     this.addListener = function (ev, fn) { if (ev === 'place_changed') listeners.push(fn); };
-    input.addEventListener('keyup', function () {
-      clearTimeout(timer);
-      timer = setTimeout(function () { listeners.forEach(function (fn) { fn.call(self); }); }, 600);
-    });
+    // Re-check on every edit (typing, paste, autofill). The page's own input handler runs first
+    // and locks Continue; this runs after it and unlocks Continue as soon as the address is valid.
+    // Nothing is shown while the address is still incomplete.
+    function check() { if (valid()) listeners.forEach(function (fn) { fn.call(self); }); }
+    input.addEventListener('input', check);
+    input.addEventListener('change', check);
   }
   function Map() { this.panTo = noop; this.setZoom = noop; this.setCenter = noop; }
   function Marker() { this.setPosition = noop; this.addListener = noop; }
@@ -135,3 +141,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 });
+
+// Newsletter: the original only flashed a small check mark in the button. Show a clear
+// confirmation under the form for a few seconds after a successful signup.
+document.addEventListener('formsubmitted', function (e) {
+  var form = e.target;
+  if (!form || form.getAttribute('name') !== 'newsletter') return;
+  var note = form.querySelector('.newsletter-thanks');
+  if (!note) {
+    note = document.createElement('p');
+    note.className = 'newsletter-thanks';
+    note.setAttribute('role', 'status');
+    note.style.cssText = 'margin:12px 0 0;font-size:14px;line-height:1.4;';
+    form.appendChild(note);
+  }
+  note.textContent = "Thanks! You're subscribed to exclusive news.";
+  note.hidden = false;
+  clearTimeout(note._t);
+  note._t = setTimeout(function () { note.hidden = true; }, 8000);
+}, true);

@@ -1,6 +1,6 @@
 const { chromium } = require('playwright');
 const OUT = process.argv[2], BASE = process.argv[3];
-const pages = ['', 'about/','services/','testimonials/','home-valuation/','terms-and-conditions/','sitemap/','dmca-notice/','properties/',
+const pages = ['contactinfo/','qr-contact/','neighborhoods/','neighborhoods/northwest-hills/','neighborhoods/westover-hills/','', 'about/','services/','testimonials/','home-valuation/','terms-and-conditions/','sitemap/','dmca-notice/','properties/',
  'properties/2419-ashley-way-austin-tx-us-78744-7254772/','properties/4207-canyonside-trail/',
  'properties/4405-tambre-bnd-austin-tx-78738-8821382/','properties/9705-mountain-quail-rd-austin-tx-78758-9452890/'];
 (async () => {

@@ -25,7 +25,12 @@ PAGES = {  # mirror file -> output path
     "sitemap.html": "sitemap/index.html",
     "dmca-notice.html": "dmca-notice/index.html",
     "properties.html": "properties/index.html",
-    "privacy-policy.html": "404.html",  # the live /privacy-policy is the site's 404 page
+    "privacy-policy.html": "404.html",
+    "contactinfo.html": "contactinfo/index.html",
+    "qr-contact.html": "qr-contact/index.html",
+    "neighborhoods.html": "neighborhoods/index.html",
+    "neighborhoods_northwest-hills.html": "neighborhoods/northwest-hills/index.html",
+    "neighborhoods_westover-hills.html": "neighborhoods/westover-hills/index.html",  # the live /privacy-policy is the site's 404 page
     "properties_2419-ashley-way-austin-tx-us-78744-7254772.html":
         "properties/2419-ashley-way-austin-tx-us-78744-7254772/index.html",
     "properties_4207-canyonside-trail.html": "properties/4207-canyonside-trail/index.html",
@@ -171,6 +176,22 @@ def transform(src):
         else:
             a.decompose()
 
+    # Lawrence's review (2026-11-04): drop the Oak Mountain test page from the sitemap, the
+    # login-only /profile link, and 4207 Canyonside Trail from featured listings.
+    for a in soup.select('a[href="/Oakmountain"], a[href="/profile"]'):
+        li = a.find_parent("li")
+        (li if li is not None and len(li.find_all("a")) == 1 else a).decompose()
+    for a in soup.select('.featured-properties a[href*="4207-canyonside-trail"]'):
+        item = a.find_parent("li", class_="featured-properties__item-cover")
+        if item is not None:
+            item.decompose()
+
+    # Sections that only make sense with home search or a Google Maps key: the "Start Your Home
+    # Search" banner and the neighborhood map (which would spin forever).
+    for sec in soup.select("section[id^=section-]"):
+        if sec.select_one(".neighborhood-map") or sec.get_text(" ", strip=True).startswith("Start Your Home Search"):
+            sec.decompose()
+
     # "Powered by Luxury Presence" credit.
     for a in soup.select('a[href^="https://www.luxurypresence.com"]'):
         p = a.parent
@@ -225,6 +246,20 @@ def transform(src):
     return out
 
 
+HIDDEN_PROPERTIES = {"4207-canyonside-trail"}  # no longer listed (Lawrence, 2026-11-04)
+
+
+def drop_properties(body, slugs):
+    """Remove properties by slug from a recorded Properties API answer and fix the count."""
+    data = json.loads(body)
+    d = data.get("data") or {}
+    if isinstance(d.get("properties"), list):
+        d["properties"] = [p for p in d["properties"] if p.get("slug") not in slugs]
+        if isinstance(d.get("propertiesCount"), dict):
+            d["propertiesCount"]["count"] = len(d["properties"])
+    return json.dumps(data)
+
+
 def build_api(rec_path):
     """Recorded API answers (testimonials, featured properties, ...) replayed by /js/site.js."""
     rec = json.load(open(rec_path))
@@ -243,6 +278,8 @@ def build_api(rec_path):
             continue
         seen.add(key)
         body = URL_RE.sub(lambda m: local_url(m.group(0)), r["body"])
+        if op == "Properties":
+            body = drop_properties(body, HIDDEN_PROPERTIES)
         out.append({"path": path, "op": op, "page": page, "ct": r["ct"], "body": body})
     os.makedirs(os.path.join(OUT, "data"), exist_ok=True)
     json.dump(out, open(os.path.join(OUT, "data", "api.json"), "w"))
