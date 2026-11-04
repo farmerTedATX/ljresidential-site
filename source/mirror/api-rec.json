@@ -1,0 +1,317 @@
+[
+ {
+  "page": "https://ljresidentialgroup.com/",
+  "method": "POST",
+  "path": "/api-nv/graphql",
+  "req": "{\"query\":\"\\n  query Testimonials (\\n    $companyId: String\\n    $agentId: ID\\n    $teamId: ID\\n    $testimonialIds: [ID!]\\n    $offset: Int\\n    $limit: Int\\n    $sort: String\\n    $sortDir: String\\n    $search: String\\n  ) {\\n    testimonials (\\n      companyId: $companyId\\n      agentId: $agentId\\n      teamId: $teamId\\n      testimonialIds: $testimonialIds\\n      offset: $offset\\n      limit: $limit\\n      sort: $sort\\n      sortDir: $sortDir\\n      search: $search\\n    ) {\\n      items {\\n        id\\n        testimonialId\\n        body\\n        author\\n        position\\n        media {\\n          smallUrl\\n          mediumUrl\\n          largeUrl\\n          xLargeUrl\\n          xxLargeUrl\\n          height\\n          width\\n          altTagText\\n        }\\n        seoTitle\\n        seoDescription\\n        agents {\\n          slug\\n          email\\n          firstName\\n          lastName\\n          avatar {\\n            smallUrl\\n            height\\n            width\\n          }\\n        }\\n      }\\n      total\\n    }\\n  }\\n\",\"variables\":{\"limit\":4,\"companyId\":\"eb047ee6-f832-47b0-a1c3-06080d72144e\",\"offset\":0}}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"data\":{\"testimonials\":{\"items\":[{\"id\":\"84d9ce27-3a3e-4992-baf0-773da3f589d8\",\"testimonialId\":\"84d9ce27-3a3e-4992-baf0-773da3f589d8\",\"body\":\"LJ was absolutely wonderful! He was personable and professional and actually made me feel like I was the priority and not the other way around. He was attentive and sent over homes that were exactly what I had asked for. \\n\\nLooking for a new home can be extremely difficult and stressful especially if you don't choose the right broker/realtor. I can assure you that if you work with LJ you will feel like a priority and not just a commission check (which sadly many realtors can make you feel like). \\n\\nHe deserves 10 starts all around and I will recommend him to all my friends, family, etc. moving forward. Definitely give him a call!\",\"author\":\"Samantha C.\",\"position\":null,\"media\":null,\"seoTitle\":\"LJ Residential | Testimonial \",\"seoDescription\":\"LJ was absolutely wonderful! He was personable and professional and actually made me feel like I was the priority and not the other way around. He was attentive and sent over homes that were exactly what I had asked for. \\n\\nLooking for a new home can be extremely difficult and stressful especially if you don't choose the right broker/realtor. I can assure you that if you work with LJ you will feel like a priority and not just a commission check (which sadly many realtors can make you feel like). \\n\\nHe deserves 10 starts all around and I will recommend him to all my friends, family, etc. moving forward. Definitely give him a call!\",\"agents\":[{\"slug\":\"lawrence-stemberg\",\"email\":\"lj@ljresidentialgroup.com\",\"firstName\":\"LJ\",\"lastName\":\"Sternberg\",\"avatar\":{\"smallUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/https://media-production.lp-cdn.com/media/zv2jvvrhj7mdpmecvm8t\",\"height\":5182,\"width\":3456}}]},{\"id\":\"3848e676-19e9-40ed-8e01-ff8a4d9dbfc0\",\"testimonialId\":\"3848e676-19e9-40ed-8e01-ff8a4d9dbfc0\",\"body\":\"LJ found us the perfect house with the view of our dreams.  We never would have won out among the many bids without LJ’s knowledge of the situation, his guidance, quick action and persistence.  The relationship we built with the owner during the open house (because of LJ’s coaching) was key.  Every time someone comes over to my house, the first thing they say is ‘What a view!’ and I have LJ to thank for that.\",\"author\":\"Carol G.\",\"position\":null,\"media\":null,\"seoTitle\":\" LJ Residential Austin Texas Real Estate What a View Testimonial\",\"seoDescription\":\"LJ found us the perfect house with the view of our dreams.  We never would have won out among the many bids without LJ’s knowledge of the situation, his guidance, quick action and persistence.  The relationship we built with the owner during the open house (because of LJ’s coaching) was key.  Every time someone comes over to my house, the first thing they say is ‘What a view!’ and I have LJ to thank for that.\",\"agents\":[{\"slug\":\"lawrence-stemberg\",\"email\":\"lj@ljresidentialgroup.com\",\"firstName\":\"LJ\",\"lastName\":\"Sternberg\",\"avatar\":{\"smallUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/https://media-production.lp-cdn.com/media/zv2jvvrhj7mdpmecvm8t\",\"height\":5182,\"width\":3456}}]},{\"id\":\"4213b0af-7c8d-4913-9a4d-370439ca93eb\",\"testimonialId\":\"4213b0af-7c8d-4913-9a4d-370439ca93eb\",\"body\":\"LJ is incredibly knowledgeable about the Austin real estate market. He has a down to earth approach with an emphasis on real world explanations and solutions. I had a great experience and would recommend to anyone looking to move into this city.\",\"author\":\"Alan R.\",\"position\":null,\"media\":null,\"seoTitle\":\"LJ Residential - Knowledgeable Austin Real Estate Market\",\"seoDescription\":\"LJ is incredibly knowledgeable about the Austin real estate market. He has a down to earth approach with an emphasis on real world explanations and solutions.\",\"agents\":[{\"slug\":\"lawrence-stemberg\",\"email\":\"lj@ljresidentialgroup.com\",\"firstName\":\"LJ\",\"lastName\":\"Sternberg\",\"avatar\":{\"smallUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/https://media-production.lp-cdn.com/media/zv2jvvrhj7mdpmecvm8t\",\"height\":5182,\"width\":3456}}]},{\"id\":\"80a10c21-d0a3-44a8-b0c8-95d84c7b0e9f\",\"testimonialId\":\"80a10c21-d0a3-44a8-b0c8-95d84c7b0e9f\",\"body\":\"As a 35 year Commercial Real Estate and Asset Manager in Central Texas, I can unequivocally endorse Lawrence “LJ” Sternberg skills and experience in Real Estate brokerage!  He is an exceptional professional with 20 years of experience.  His negotiating skills are exceptional, and his market prowess is second to none!  Utilizing a diligent, disciplined collection of comprehensive data,  His knowledge of the market provides  for a nuanced and definitive basis for your successful Real Estate Broker.  We are facing a very dynamic market with rising interest rates and a host of increasingly competitive pressures.  It is imperative to select a skilled Broker, One  who not only understands, but also maintains and follows the extensive data,  underlying market forces that will drive tomorrow’s market.\",\"author\":\"Dale C.\",\"position\":null,\"media\":null,\"seoTitle\":\"LJ Residential - Expert Austin Negotiator \",\"seoDescription\":\"As a 35 year Commercial Real Estate and Asset Manager in Central Texas, I can unequivocally endorse Lawrence “LJ” Sternberg skills and experience in Real Estate brokerage!  He is an exceptional professional with 20 years of experience.  His negotiating skills are exceptional, and his market prowess is second to none!  Utilizing a diligent, disciplined collection of comprehensive data,  His knowledge of the market provides  for a nuanced and definitive basis for your successful Real Estate Broker.\",\"agents\":[{\"slug\":\"lawrence-stemberg\",\"email\":\"lj@ljresidentialgroup.com\",\"firstName\":\"LJ\",\"lastName\":\"Sternberg\",\"avatar\":{\"smallUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/https://media-production.lp-cdn.com/media/zv2jvvrhj7mdpmecvm8t\",\"height\":5182,\"width\":3456}}]}],\"total\":16}}}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/",
+  "method": "POST",
+  "path": "/cdn-cgi/challenge-platform/h/g/jsd/oneshot/5c2e6b612edd/0.3888800179300641:1793758236:H8k9mDaw1TkXl-h0QohKVcQRVcbplQvHzcq67MfkxgA/a55047d27c01ebd6",
+  "req": "jZW9Zz+kgsEca0CTLYXjw$NGRkVi0po9pju8T$zF-FhLwKAuXd90zv7eFG3uAER-48x7lZr5S4Andr-0XE1lkHaKr3Ed7LjWp7AbC3gO9zyV6GEFhjLUXixw8HTTO$$zPbIjGdvsO7drxZOkk3LpZ8nXVFgd6OXJyXAezMIejjqxp+F1M1Al1a+HkIrI+8tidB3N7wgPQ+VWrVK2FEoVGYUsa557osh4+c9rt7OmspcAuRHljH0pgwENuyTvjQj2aghrZCIU9MBkT53-rjlAXoglX+rB$GkhYUtCV+jTg6LWqq-SxCSVqbEuY284MZTRSWpmB-KMIOsjL4R2UrglqHTUZBd9lRJqY88IqTIqFl78iRDyeDHl2yhw37$46+ON9-nl6PXyId3ex$gVo10XxKxzBGpIuYsHE8i+ILFU-FhSrV54E3-m2-3D4b8O6jhkv-JzdFCbzs9hCVrjFxt9nZ9FpuCYJn5+m+xtnrx2y0GkaT-iNMyso6tiDYRrQw7OOaqWizpEqEHP5teWematWb7GdD3w5eZYnNFTOOFOTbdZoYqHKyoeVqAL18MDNPq37d+AdmCj5IrF7s5HUBNT5dhWGNXDypzvRCbIjXsgHVE2hYqhEZrn1jn$4ShLSMSSzbI1e0SKpN7$FVIlv$xArTkdM16UyP2HGV-wZj27QI6kESU$BXUux+u5lp-Rr84o2R7kbyJ0ShrE6GkdVoZpt-2DFzC7Jx36oq4tczunHtC1I4biBQAZlMwDRbvkWJgL82bdumQhseip$VeY-juWowFpCTz7Gj0y$koX6YOJ+h-PRvu89VsJQV2i0W$$xu2BUrRcjqYpsBCV-p03GCzjosEUlQu5xuu0LbijO6jbhBt3K9bcYvS2CeGG8$bDGZBB28CXiMApnZzka$FLbcZSabNUt-77mrh-AZsK1vVUxueJXhUPL+adyGaJlHI3JJEQSirkEqkN6nzsEs68p13u7YuHIL9$aJEE9lWsuh9+nwZND3xpUFdt6kvKUpT$csr7CP+-7onxI1jpp14nQwM00GkxN2QS9GQnHp7d0W6-GTOMBFNaCnI8iW7JW3P$omvpeB1v4kGlLTdP2654rQMUuVb7C$x923ziV4OASS8oGptVgecZ5Z3mG8531$OBTaEobeMJvVnO5PHG$Cbc8e+MLkgqqzTnTTo1yv205j1bb+WGRS+bWQJAeqIbYuN$IE2DwuWkXbXg7E7ppsgzkBHMJza7LY73P4Zpz2Qoop-uKGoOruuDv0BuA$apEktD4J$-haE2q3DbhgYyUz-LbbMjpxvxZPct+7gkoMZGN6bdck2D+Jly8eOYHvY0vwN7Dwan$ZIvO7G$BMSTNjgKypV2OMSOyz6qypNejVo1xbXRtZkkFVC7krzCWE7KC1DODQHJvWnQbbaS8ir42mU2jPD9y3pYv5cYMLoaCnPo5jcyHIwhmPQ6i7ELlhHlnbVkmPBUAloh2Z5XLh4HWoh$4AWNU-XyUMdpc7LOr794wBqWG$zxNIXlC-w3YDvF0ITFy$hkj+cRoZ$rSAqxJeCUFck$CeP-0cmPkkV$zxmcnLgausjxbxy$4rZMV-HFO0UoJhHbgQFZ3+43mhKzxJK-tZWAd6vLAPOnQZZbyBFTDwIqlNksxoEBV6RRtlJWK-7w6v7AkjmRl-bqYmZL-MYw+oycAPaWm+ekDB$PeRBtdvZ8dY3j1DNXBPlwDHBsnnlPlJ$WUto3lzTXpwt-UYyyLqihMlYB7AWs$V2b5dZI$AOBP2QnBDzzZA2l3+Gw75OMhv7MFNiVgGZD2JMK9I9O9dOPsjj1p1KUiLoh-DDJSDTop5M3TduqGw0YBd-w50o2O7PpjQ2BQQyDIlnJeWFl9nPYUzPMotC-camaVnVsUKQ1kX1XtHqTZL1sQ2W-HPD0NS4zXZknmJmT$sOiI3WUWQZSRNLVj-tS4FBM9rHbZk2ry4knIQ9hN9oJ5D$wFGbQlquN4p13t61beRj6IaVEUilY29EtA55g4RdWFqKPdUVwu6t8U8MsNc6Dx+VDlk9Tn4zrAVcmE+-Rwpyd1olB9w1g35qMAuBVuZO+CCp8SdlHkhUveHv9rdk-QdsxJ4u2QEg6EgOC2FJ8mvA5M1AKZsl-u+VlAtmh-U06w2W$8rgod41NMpwPL2-8vB1kPYg+K5D6aCR6D6GgIMLNHe-+UKhKmkSI1bH5BbKCOPgovCMPGeDPZ7X+gWuEz-FgdhcE-Pgp$$QmB8PRdOL79HReyd5dEjr5j-EYFwoUhVhjYKjrq$oZGmAqbVMX51Jnez4Xh3xUAppL9$pMCVDow6kBvbJR1RTaXIxLiueQeFg7agpzi1A+MJsGgBrc0+u7h$kZEclYwljw+oLay3x-RyCyEEbqABp614T-XTHj9rYP2ZmKTjhTKE1KD8NxEdmcTOPS6MSNuiyX+3yDioa5NmGycDQEoy35is9cSXAwPNQ0u73LVlBhm93GFdrI1dHdUEbCZV5DxWCd$O5L4aEOMeGwFRoJp36zh6VRCTHwUQDOKphVu-W7HhM56HZ3ot32T3TLvD9D-CmQYjGvF8McUdgo4YQNQ-aAJM65poQK3APlIox-bkZSieQgAHHGYcWHZPhKvNczhCsLqsgc8xHaXVyrEQtwov$me-le5rnFMW-i0XVkRniHkzZZkg9ewKjK7ynAsm-alcDja-QArDCUCDo47tXM$gyqwlTXSoTWBmVw+Po8gzoe7JY$XrnaPme750ltel4vpkCVE6K7S0dt7KPzb7Tb5b6uiZ2i24nySyJhTBEEAzh9lsZ4ovhxao83-7VWF$glm29P83vsJDZ$sBibQpcPIsniWFdEpLW2wB1+gRqK1tny0ZshFQotFm85j0Kset34Qq+NaCIxj$hH186Tv+o8J$bgGRxPAjRX59dBnkO7h5Yz5D+-OStQL2Jbdy0NU6+3mP6O5aBW6ksjKvNd$Ay-3Z1hBNw4uJ+IVVRYC$iHVFTy6uxMT9MF2WkpRt1wqiYD-Ne0aZUGZWmDOaiD$vIyZghNCebWtol5uT54n$UXJ0EQU+qA3qyhWqgOUjQVpeY6Eb-ja2NbvB-JdibezmNFlpS+cP8kMvAxH$pPs9gst1rsqO8ZoWK7imImUSYVquHo3btC2-vanxWQQFus6M-eSBlFS0UbgHMpHkbBYM8zwh5-Q6Zrej7kwRiIGRCuQgcPPGuCa-Tm8Bv7A5T8LG95kM5BKCC1a28y7Lt0zQr+8Dcz34QIQg1p7QU4-ajORWgJX3e6$L0bIggBzJJzE2rVXlcUvBVl-GKwU4TabitcwG3ZFlLeHXw-5Wu+qVPb6SyekOs9UcxVql+E+Lm8C9u8jNTPNe4quANRr-n21jexrruspddL1L5GExFWkkZ-MNUsuEnTRwkTBxkVAiQRr2THTHi+BRgKcHAphCCv-CLvhTG2p9oImNEnw-ByKE4uTju0ErJTsk6nJjP79THMc-MkHRltHNmvGsCAdq6o+vuCaIBOYFd0sMpymEZtSCztLZDc+MXMpnJWnRsRZHpnUDh6ZQ-VOJXGicUAvKC4r8u6JtG9VAQ$E-OeK$9qCeUUkdCcV--qB6WNyWtvW-g7M1og3EKSO-ebJdVAeylR$K7ALJVrqDrFewGtkogn1qJSLwyhZeQlOZ8vrOpn6tkdWDvR-scJZJZyTqkCh9U6hd8qNmc0goME0BwJIiLRdQnW9q8RC$JYAHT-iUZuhzpNoJ5-4HlJLGTPStDb$$kE4GWg8Tav-kolv-4TwQMMx5uBJ8WNWHPe6FdVCZ62vVeOoxPD+dhhsow7i$pDe+Am13T$GunhhFkc9gxMZHkbX+iWS474tBwpydnez3b3CoM7TK0siJp5yAXMn8CrUh0lEBpTA1QyL4g$DXK4L9w1MSORVryxwyPJ8xWKOM08vJUD2S-gm8vWdgFTkcarWBIm-oW8uKsFtYSpbXld6oJaCEYnnRRTCC5IrkNN+0W2jdIGATu184-V84P0S600NBq53tsx1OIVJMrqVL25IwBCRc-0bkhK+XBrqNB836PSGkt$tdR2R$uhY-qcTFP0F5S205g1G1vjBLrKcbIxO65plrJDZkKq$gKQ6nT+wFt2qtEN6-ytAHS4e6Hz7l8HrJLRzl3YP4MWyh+eLU$NURuG+UbFdIzbDLBALGuB-RKLO8NoEw9jjXZdtOL7pDPZddh4GhApKVFpFe2pwI+iRjV-RV$Iq8L$jB7Y9uxcahb+VquJHdWKsyC1vbHeJsWNmObbeRiRlrjs91T-AgSKu59Go+pstgb+ddcGjZLoNy$s1$bVDw50E4Ga$RKvnGYb$ESg4xIqLg8XHVaaSJ4lmNL04QhBroWqjXFeR32pT0PKR7GTigOWCP5yX1QURbSRHs0EmtZZwY$xJrOX6Rhu$iPvbvQEMky90+goLNYKtpvNKNCdngnS6PyL$+Keryii4G-vRZKQwzt1gHCn0rBU$mFc2xoKRw9D-2By1I4qYu7Z0QGARV+dCJAykla22OQ-dVqkk6GMTWIFGum6zbZSMDr+90oHPdSFSo3LbM6yz791i5JwTLTqKRUvoWSsGNVe9WoS7oYAIJRH9IgcgMntU9IJS2anSGx6KZ3PN5sOVbu1yZU61UckWtUpzrt+ejyZ0koVHM$7t7ngzbqN8uk4udnwtag9DMQ9sWR2$5lgb1DRGIqlHSFaES6$FNQPGo0gFn2v9a9954P7u0v$+3IaHAy3L6vypWNA30TO9VNuBoK+TZ4mLBLHVatLlYsPL7YWmLEkqgnDklSlbpn6qoMvd4hsQtCGMJ4Kh2icoyWOtuvyWMMoO8b-5xNyKgwMyIHpWtICXgokzVRXZB7Knn92swl7qR5sk+NwgKOmw7KdceF3XFFznqkQ89iqmelQdHPsu3DcZQdVIU5e5XyME6SRI8zU6NgUdPVLRuHCxkqduYzWpyQPN70JIZpSFvFMnOa6XGiK9DQ4pkxyXgi2Mt75LapTnK+KWtJktZanc6$NZWWQSQypwj$eIFO+wJmdjzgcgXRuz73ttAFR2gkm9S0kmiy4O50dudu5RIJ9aYpB7B5WxHts0BJkqh5C$3olSt9Um7LDZYEEZ2LD9Ok+5RB9DaNebBNCpDKsRHRw+JgUbeCxI7pWXCyIlVW$iL5PbqPAk5hklxUFrIuYdbllJv6Pck864cX3IHHaJGvETaVZgqdRP3-u-uqXm$pWywRe4IUk6RPnA4Xj-AYIJJCbLIZYajJQ+cX8M--AoRpR4E-1R9SxVriKCvxC8Bgk9Uc0xcJ+3v2ZP3eoJuTiA07ym0iu-CwgHunkjQNstqTwVMNQlHXGpCiA1cyQZhm2ZuhBoL4kYdmUGstH9eJ4oLZIAPuE8KFr-7XJEQLNia1$YT5q2GVxk$I4TqxsnNlOdW8yw-QILZnYJSRoCte9RoS+$0teyexte4gQ66GgT55uvlAhF5jPx-XLgqP9l$W$rIK2FwMA1B$7m5X1UZtYorGNzC95x$biha7AbDunMC63k8z8XsKIc54pnjCNc4+X2oy7SZH3CeOBxPLMRU2Z2NHMVBPxCFScKu0PcwLMLLJJU2VxKxABPkBt2QObH+pXir+llXVgSURo9Y5gVvuQut$9b5AUhgNGbybJOJFCkYnb$PQeD+uNVl$-ZQuCN3am3J9zYgNxhmoxSdIkuUwYSvJ2VS7QEMiWTm8xgYs6IUvZLEzzWSVhzlJYeOIqW4N6mw-S0uT$ex6H$Vpn$ze4ZOdS7Mpj91GtH-J+$b-BtsmdcT3vY1E7vSz$I9C2+3xRBUpw+M$qFupRz0CW3oW3u-KkPavydsNFvH9CbiKREDeVVt5Zvqv1FPYjty-lXw+L-$ywV832AjiYL4F0brPIRc6X7hwwVAebvbJbDrNYL+w3xojrCWRYqhiXVLkTBk1yJqr651wLyBv1011wKBqvLndFrtbsOAlVx8Cd8YCl0URnANRHybqqK61h4SBsrvVDIex13uWYS4SbqwN7ZBaxcEEuz3s+uKhYE2IReSL1e9BlBmjkQRqwt4rb9NlwWu9uSwlTIHlmWCEEYEyo8gV3So5S8CG3HKjRj4bARK0W6G-dSD-wEzKtllD-Um5cam0SzbB4sEYg-B0RGaFsYLmYX2D87px6WbE4uPYx+Y1vuwxWv+5rrdwuKc3M2nk9ZK-hJ1CxaXmCHBsTHxmq4$oXSXMXpGZ4TgOoXSHj7mPa9bv3r5OzRxDwD4Fj9JL231iRTxB+BglcaLkZHeyIoc-L2iQryvWcKWd8RCpAslpltDdqe2q$n96XT2cbzLmQbpQti$w9yqSesBCd8ogmaU84RUQZNs0WKqXq+ywEgtV$0ECwTk8TWtl24Axql90JWstHO29QhN6hnHadlgr3drEQv5cuXMsy++01IBOV2jw-F$c7-CuCja$mQEP80OQCqEYyIc0$3NvmXyR4IviPi-yOkjvmO9V7ZV+p5Zu459-RwOO$qRvq9VhH$giTzxT$ZH4IwulGSclsG$TF3zB7L6KlyhBBC8N4AJKjIpoAiAX1$6jQAEK5oFv96O8d1coW5G76SU-ojC+Z5hC2Q9wUoQ8jhUFCEGTIHQFl-BN-rHW0TOd5i$zrBZyGr9OiGozMws5t--K9bcxblQlACUWHZSCdvTaTV$7pCOXy07VqB$BtwEZQEjCbX6Tyc5QJXKXL6rdJbrSdbe$Yhrg6vW7d9t19EPZa2xZgCC$7DJHaI$OAhdqBqR1v7L40GAlC1P8P-tqb7w2JC-UlbFgUz6zl0pmK4SXELjh53MHcgytsqGKZLGb0hq46YCTZoIIgmDnm$suVn-9Dpw7JHe+yiz8rZiLYxjpYwmUr2a71UqYl7CT8HQ8Emk+JSk++s+FEiT54tV-XBRaYM982lG4Gr$BIUxVw9egUZ8pcr2HJQlyGiV73Ae4+hTUgZOV350u1nOtDhYvpFoTzWBuzO4odiTE-hn9CX6A6zhwEA+JooLV$Ev9$2aJeUTtt75OyFsFqAkF9FQzHCLOxFVJ9GXmljAUr609OFUoehHxP$YhYl8T-wyBIvcZi5eeyqxg1qEklgP+SItaQgXSeXCj+cChuWkPnaUj-lSvkmxkcET2-aqbhcDvKd00nozWTaO9lm8zivPug40TXybz-p8$-q7PPdwOdOdt4tXlku5knRDjcUh7kd3y7LIOWyKvicLv3r-6gnD75lccmMBaQjOzIeWK+QAT1pjoo0Y-HISvduyVh1+B-wnGkke$YxDYaTSLTLmL+bIFMPwQkHCSKzx8Ov6l2jLC43o0GkEWdzj7hV-JxY5aSdieW2WL1h77hqEiUNtZGUtK+By2gjl3hYwgs80Wrgz3DdZdNYGpkWsTPoNIy5HbV7NxKE$dFSmOXSUXJ-Jt8LOb5JA9gjIrgwknv9N4yZY$3bBtxoQp+Nuh+e2VeUsp+3ExmgetgA+WMCqLI5XOcxG+sbKhg0kAEJbj$9WNQPM0IGTAn+S$L8EJs-LC4wyGeeAn6I6H1tFA9pPjBeGnKxr2soF$+5-xaUpRd6KZrTmPwNgz4RE27W1e0p61DYsZsWVv2nyLQHZDR6rJVaglwJw7ldXIGszQbOSjqDwIsI7a73sWFTDFB8N9jkOyb545NY0wE0YPBmCc9CkRviHRY5dTYBXFnYDcovus9Q3x$ZHjT3U-RRSHrw0glYs-VIznNkpE9N3U8mjrEYCLaTgXHtoBXHxtsh3mn8z6vplXgRAbC+Et$v6BrIy8B+xgLyMbypMaRy3jTYwCmiC5owtPXK3uQ+$PdJFvl0jEi8Wt0LkANxZom55j6PDDDVtMeIzLoSUnHCrWcK6jnW0Yx60ZUCMkG3Lpd1GgqL$Xst8zKj+3jRBMdXhg+ph038Ij7LzLVZYEwBhrRswQ9CmKdGYNrCSHvDIXJEcx8Q$sb-+5bhqoaHbPPSk9LttSYO2QEVE-D+dl2W97n+agZWRHm0P+jWdmyv1YMXxTEX0FYi4A1FeZgH4bdtH+xgKLNi3TtgB3HNqdAy2$dIq78qR$3ntI2RAAA0N6AXknmJxWhQp5NKqbAXK5PE2iRCSv-gg7g7rD3kXUadLAUsB$FnKNtsJjABZnOngcAzPp7kKJY2HuHaiUxXZOK+apkTOehbbrAtQpCcqNF8vSSYibo67OAsgSrlygnuk3RS23A9aQ0HYIcFBm4ZuvZo$J4DKC2XDSSLcLi9OYoAFAhs7bT4vDt2d4A1-MzKczx121Nbg0x1AWKSTKVswKnPT9uun7trnW7ETd-caHsSmvZ+R1J3zy0tYcPjaTaNb5SR7uon7SCeTFqsgklkxp$eL56jnz-4pyilHwG3b-4tYvGvyZKmeQeLwyecT2hh+I4n3I4xEgJ3YFdc0v4GKB-$XIFTJRXL4aszuttgnGzD5dKhJOHvYTR06rnGSo8lKSg-gVCIpTwtpAcFn47smGc$1jwW27AbiXMY0MCuJ+adyaTxoqZnX+Q2eoyVeI3eUpQ672i2SuFOxXiGbiapoECAxyr-diOvQyEE7KTbKXJxz9clhEPIgSMbHtrTX-hNhDEUVunkGCz-b3Z6EJpa4wZvK3GBSFUiCQmWlSOqCZ1ZTK4smgDXCsS8tMtT$odeILEW$vWJ67QTScDcb$PrChE$Z++qMX012RKelgHCrZj5k-PX0DKZ5yUcxv2Wji9aiDSjoPhYjOL4HlIq7YSlHPI$Jk0BTb0lLLoGo3S$+JlsWFySwVUazIBhTC+GFCHbtj7XszFZM$DhHqCVpue6oSlTRFqwovbKQRx+wBD8DhPiUeVUin8JE9WUvrc5kiHYseiHyyu5b6BAYBaAnlRH6p81ieiYO4Qp1YNaVYlqXkePCkRl0ctVVD7aYM4+bqlI7bq1SwA2I7uTJvc+KEFRs2GxBT5bujBHgcOTAYP93AGC3JpSuVDNzqWGU5skRDFQviJI8IF+mr8Cnw2BLSOMXnqt-JkpwECOsgar4PgNpqcqr-2N+gJL0W4wHzDghguJR4oXn8QI2DzuPCwiMUZxOZbG6enW30RtOYlKxzxEt7HrEBaeRB65q$XAlczcIGPDJls2ijrXGPzUAEPVoV4dASbbjMUwwzxMKZSn$IMtIu0kwyPNKCNywb2J4xvWMZHaW1p-lwqjFGJNWpvYzNYCRb6Ard4c8Sm3SgbsSWQ5ocgob9xugOUmhYJjiF9y0ShvW2MItorp64-jh1lmRgLSRBzraqaaoG9gaaC5SeoDRPH-wUukBIKa5WcGnPYBNbHnp4RNFpLZOb3LSiXs261syxd3l+U7gO8+HX7S$QH5erMgd-pFmdhNdCFej9XJw6gY9o5wojv1Sm9wwVj35FW7yyglo6HzZUyWrmL+CWddZeI$gb1+4rvtOkwzVKVRcAvThtZcircCczWwUydPSt9cbPS40YZXLucb9ko2ylDh6iM8eAgy3n6NMQa2rdiqKGA6CMJK-t2Px6e$8GsgHX4FAqHBis0uD-WvE6FDF-I3QWA+DeIHDEhA7HUIiOmaUAaGKkB+1$Ndz5H2d2th2Nm$8Zvk88Ww$xuRn2K8rY+2+pSNi8btRPllDwUCPhYF51RvnbMXBs5WpUiSrR8x5jTLHyuMxT9ivWIRbq3KhxL3+aPtymvVoLJh19TDG5NkavLKdSzQZCOqjuTTKRumjn3kr0qsh1E7iTrn$qsZSQPXwKUnNjR0V8t49SKbIh9MQcTVAQZbbtKauBSUjFTDLlK1s2zgxm290FFcjGpHVTnygp92YXXIW2yYvFB9EYJK0nNLHV4r42mKn$tCRS6xZvNEUxmeSmTlbD-ieyq1J16qetkjsSKJCgAsKckC8pPdw65hXzka03X9YNT21WkwcGHWhALjqOVZNgG$1vv3wCziInhnlEMPdVpYBnvA6JPyU-r6eSzqGgYQ0yKdmKCqU+SvEV+q+P3cLzyh+-3Eo+CyhMB2nFQZ$p9k9l$NYbx71xpDU1AocegeqEDBsB2Nj$JcROW2Rcv1hImeJ9j214VqDiC5zsFUdQutYqkB8477YIku3qqwHupIEEr7KeU6QErtcEiwG8mgE8py$NNng$MlNZ7IFoZz+F6tzL1sF8YNgeLr3abvZaTFtoO58ECxzWnM-HIMaDzWyko4NEVT2iectECUMHZY0CuOBQAIeeKiwieGHmEvpizIp5UZ1tyU1E2ClX0LuLK0uYn19iCLSVSWTcHPreXw8QFrCVHOyqN6I-MqNOtPqYLLKAZyM3SEzwwileYyRqlHeyQQHcII2E+DEZHOr4gY3WgkBtagAH7oRFOWZ6qxn$csSDa0YxWGzx2-96RXays-gu3DHjdxJ39jIY-IEYtxy0nXpy-daPnJpmIRvkxNQGZypphLjt9prd+v+hjTXu7iUq6EbnnAcduWI2GWG10Xl8GZHSCgzyra-XqKU5PbqmOPokR4XrrMlqnM85JdwYB8JIHOKEZvCiA7ObBwEuChTUhld0d7h0iqwnGdyFW3PH6o6pv08v4hEElVgDxCKTR9kkzoa89h2IFvSsEnjD14lNs+Z2r2i8+4-y-aDHNPFt53ZbB6O3W9w1pE3Z4Xxwq3GAcDBBYpr1lCC8ihoW1pt5Yanb7gdjOw6cvbo92gA1C7Nd61yj-FIsGpY5gnK3Gt4k+T+k+BF3wMXhcWUJdzxYFGOjlwRBaRlIWQpX+lr1hSiwSDt$TC81X1XwcVlRbMqxiFO8GtIV8-2WdtS$+PQ57TyANnZhOA56j3p8ce$K2IsmpqlSU5JOePt3MWn5YZ1O+Mpa2uBc8yQ2byEJzyct4akYFtTYLYgtH2XSYUsUlhHNFhzaAOX1rP3S+Yl3bFo+OVD7tQhdVkxQ7O1z-qVdK160azSlOTpcG5ADha6p4zI573O1phPrBkiPoeB3hTXsRArVB9ZHRLFjgrt1dzHt18Zvp1KrqRUVRWXl132zVo78y00ANKo-4$gmvPdaYN8DCbgwNZpg2ioNGbMzbXXCZZxTAT66rMk+vstDD8X0Vtntn3teBpPSuN1QhLNBYLDLjj0id6a6dUayBi8HKGr8qxz9vJVP--2XHQKXkp8Nk27RGxE7wS5GHd0N42D-XiE+tXoPTcJqwrUaDeZPh7C6Ot8ISNxcKWChVYMDA8EYWRTJKY7wK7UsK$nmS40SVDS1SpUcCBAGsJ9Q4ox3l5V3KniBRARtP5l4pV65mLEuGmEHUg9eZkWVpjd$TG1O0+8q9dZ3nDT8hoKP82YM33VYmMx+mrwtpj5SCjBNDsIX6-CKj+DYV+PG1ttoqP0cUvqmcJ8oKziZBEk6PI1GEoP2P++UGKi1WpYlmvOuJMKEXvdNpGS9ZKqDDEYTWDz+CyJjQuQhX$5bjCLE+E+FK48ElS25+81SWnK6D+VlrGXCZyJ20-+8q2ukJiD7+qpI2FiTwc58JXW-zN3pNEYLQz9AC4eGlG-b8nhTUbL9sdRKeBYGqS2b-A-2ecwKqA4vBGSBGJdjwVBTv0zY10qsObRI+CHdymkJAqJvA1CucSGVpnmeCU9QuDQhnmqqyGRyXPw5HH-4ZFL$qLeNtBXGvq6x4R3TYWsKHo34ZYqDX9u6an2AWX0LRFrX1N9ntiZY1F$ZT82WtRP$bElnCqoCbpX9uiUjvLWG2WrrgaOnI1oTc6pDhKc59R16-eVNsr5PdR7c7499$MM9WnoktZQ0iF2yd9M7ezhjdlViQmOSZJHU+y16DmKxaX4u+DKSdroomM7HPFiJwcE7yRExLTFwLP501jMAE1eATCmbeysL0x6tFtwmoQCEWWE4Y6INgU8kExNzC$hI0-D0k$mTqt+JuH13M49n-wGRGB7JRlnSKvtk3MY5M4BS3AabmasQas5zzFzDbVnz-yA76HtP$LeaZ0lFabQGBQ5bO2Rql2pP7Q4nshSTmqIU2WHOS7RJUAvFz34rKUDeFUnu2ArvAtPtJshxhLAPYLsWy3BVqERllSR9z6P33Ks3etzoXKy7laauPvPED1nqFh1zpNrCXGBKZ-1Huul9FvZ2hua18EUOL$n6iMSv0S2CPeh8NU3I4CXJA0BZAsxWbOb3D0yLZ$TW6NpGE4KYd+Pq1VZn7Uo1BWPkPKkOZgOiJBz-oLMIDOu0$FlOiaFblnGBgZx8RvlU$VZI0$-TY9ihT9OMrKQQiamxN6s$g$ovgk4cpVGBBz2rqr+I$YSrzR5sCRnmp$OjYCmje8AhlTpbNhJhIVOVEUXAea1ZwPmzdDykez3iy+ouHlqlUsQJcxwYqB3I1ZTJ6Mhbj06+bCd3LQjtxBOjuIe8HZwbwLxtgQHE1h6veiIkxGs0nuG6mDGpCYX-l$I25G4jtB-23vt836J3XuaLcwheJx64xNq9FArre95uPrPQEBZRox70yURh9RuxBuQOHbBrOSDCoCYX$$GqeJS490zo9QZhJxJionN4WNY-s53MZjP2h1gISNswVTo6eqoXwoRzFOrL1LxMh6pqSn3e8GQ0zvRo6PM4W5Wr$mdqx-B-3Y6CadzOZQd-QICUs0Xrz$20dS8yLmm6Eg2A9Ys5lEqGYsloBakz3UZYEKoOrr8DGBe6BCCGNSmkEmOz4Vl7FabV1QUhXdpP4Vpk6C+awL50ieZVGCyRe0edPZuB9csI0bFJcQxYjc09GntTZOltM7x4mO7oXeu-Kj8hkxLzBnzniYM$iSRya4Xz65T6P$NnGRu0xrElLzEiARJ-zb01GqPS+dVsBXkRl$jH9jxPwXF43WyDR$2XTcHLBG+ljHFtEuIE1Pdm90ZbuLn-FoLP2r2x+4J8zlF$lK6D41bMacD9Zug+rV7Kx+o9T9ikX-PV88xJDHgC5+yhLcKFYrY1M$O2T8gGgt3tn7U8dsyB8Zt-xjiNQbaBnvt8aWkwkndl4ea7uTn0A+AD8vT3B8DDg34BOs4yDdAihbv$IG7+pi9oB$2YNZNpZNUcREEFLnOGBibQWcyvLLexk70UgGMAOF9BY8bb0eKcdSsJ9-8IVnYOYVv0lvQE3a-I0WT6XqJw0oucI82EstGo4Ogm6LzYO-yzI$9Eh16XVyjC9OXdp6ydherbmqiQ9HniggGAzmj4X$5cPkmkxRFnp94kcIpTpE+4gAu5c+SGWpD9Dkg+cn2RNl1X2uo9IFT23o$zUNhWR+0PpKhFP4jlMcrUM9B$s5jdxKELkdkO-wwNJOh5uswHD4C4qihxE3AjLJLrp9n95Iibx9Q$c4WgkkayqdGVemNRTkWD-O53lK7Sx-IMN1BsLseiQ$MFsgFxCIuXV7W02o$KPo5Gtj7-F5Gn+r+4Y2ZJjR7bJZhMqQbU$chWKDJh1I4NpRYRZlDdAk9L8CyHXSrW2lNP53mc4dhn1p+oFc4WsR5R8d+vYDkchdzlBmG8$p6V$BHXIZ2y-gO6O33NmgWiBi0mY4yyJ+37I7LEdPC5roE7JF8-x2NpiDE$ZHmLX0t1m-xlSnNjCwxlr9kXhjA+kxw53uoiBul1RnmzVzVWXivlF2YMnnzt5MuWKmOIwFNnZb2Hv4WWLZxjSNvVWhJuzmszzZzcYoPwPxTbylPdctqPtCGdz$tpTVRiEcvtMtyAigzE+H71P7N5D5WY370IPaJsRFnj1XDPP$tmpt3Vqm+w04o$WTEF+nU3nskCV4c9soOytg$t1MKuvHhtcTszZ$iDVB2Z0k78hG4AjjCtdWi+7FjKSilKiichSsg$gCluJycxbIP1ssa7Yg-TyC0ZgJWHFPCIXLG3nHhOspN94EvjyXRPYgI-GgIST-m6W6+lkQgcRm0APTuHcxhz4AGZ6qcpLWZZvDGIplTYF58q8jvZgFc00gnC-nRR-IzG5F7wAoH2msmVkdgpNlgJBeyYAjVJIyiLzeqNyQiiWesHU8F+c$Eu1-rG78kkq947iJ3FjFAwHvI-KreAbRGIzavH33CziB6IRlHyJS1FtCt0jCzQ7r4AKMRiLChrJ4t5Y$vbbixCwRzNAEcDyXU6zgzVwxQ3VQGWlRoBed4YPILsbyZbL9ZnqKq4F7MdMj30C8s733+DLCG3yZV7etymIVthv+zDTWmSzXv0COzi0-m5cUhI+4AQUAk7KmBd9FZy+Ohd0ngyEb20-Ygscx0DEdvyOGmrj0YjST3XiCcN1gO4IOKgMqgJUuWliS-dUerpQkW0+tzp+0-KXSy8OP41ID8VmutiFDwwAxJTGzNORjq0LebWey5D3$JetSjRkFRs40j1Z9H7KiRIwWqTUcaaxHy-UkncohmMGXU7uCtajzm8mvDQnDW-b0vZvr8g2aBlbCrFuSX1uS2nXuJQG8O1l$EyhOY+rI+D$xTRx9OVztcGMju6WxiQLOvEUKXH+inQqQk4rhUv0BVsREZyUKK6ljUYFZ8PRjTUe+UY88zk96HJk$aCeB5$mFlksa4u3tksun1aezZlMbLHpq9+BG0U0naakiXPstENbV9Cjs7xQSKq4GQFVWjKAdMbyRF-sNT--IYJyrYqCwbGev6huWbj6EC4qCTtrCxNOdzIQ1RzVozPa2BRBKJZ0jJ4s5Bm0a0sxmPmKsbAWwFN7CcIWUJdOoUsjhV$7gXJdscHqTUFN0zQy7udUuyXNLNpG6-pvTTeN74+Oke5qz0oXRBMQERlpK8bHK9TXcjRA+UieiuQASSt0KG5ZidY+B-n0vJKTlaGbzFgMLLUr3qOZgnXcuUNoGaKppyMkWJTspNidXaLLeLgX1SHcxbIo-hT7sTI$dmwVGzywuR8USZi$nSHEexNli8vTc-C37kc9EwgqC7RHS-y$x7Ei+vGR303PhR5UNWTtI59AWeba2Y+Hevr8CpYc$hWG3shbw+6gFQ6IY2j0dbJ461hk9DeTVirdMvdW45iyVVPR5zsJnIPozR0Wl1jqjIDgvqsNvLRFKq24KAdUKtbkP-bQblggV$xLle3nVTeNsGllRardZRn8a6330KCekiaThKdOoTregTc78L35RHZSX+9R8FegUHUHco6h+IA0db5XHW2ME8rvLhjTIYjW5SAqDemOhVStJxTmBAtcWIRVmOaaGehGgg5uQ+D03UXtB8gmbqxr0SVC6lWazZVAsm7av4sDMa4oDvwmrCANdJ2OH7StrFj1EPOl8SVip3vlnbkpjZAKzXgt4OGlVVnlvc0Bbvxi8k7ynIHs0LYE5kRVKoQ0lh21liVw5IVMU7L4wX7mTMgGLy$UDZVRJ70DEWgY8phZEmy++lhDMNw0Q9jKD0I8mpDyFmBuyPskBYibjZGNthaGKvJlkZ2Qegiy3t1UUFG3BrHV9ScxqRcXvhps4ExZ2GpN1GzmLAjMUC9i0pvT$$VAQZLN-7YIek9J47Zkd5ECxc0gM0q-53Em$40qHJJ$+siY7crM18hv6jyu+QZT49+bVZzgo0dG26LdSq+CkTSbkokO1MoV7$C3E-UQIDEGSxWO1coB07Z2VPY1oc9ML9Os4bIL9$2mUgBaGg0Ku854Zn56WnOcTp7IAQBRoxr4A849VrRc6BCXZFeyFImgz1pjv6EgbSKcwwqiLlOb4KBjoP70g8XErFbshU3QciZ$5yqDFMSkKpowjapY5XvW3usd0XJrUZhj4WVCFHKRrsCno0LxKL81r0VmwX69ShNpCvPPZneSk5qEzWK5tcE$PQuj0MyDKVU65Gt8LtHGiDRRgpPm0gEA$bDzjaIX5HJonXd-wzkWH$uK86OQ1LPDS+zMCqnzrHCR-JdpIY-t7XA+8gn9Wh7YdGUSLRXvOMQdL9O8C3Q8mSGc34djWCMhb79U$PpcN05Tu$AX5z1-wdjnkxHx4mTG1YMFNeQKqQdNr88ny4XxeJAD4ddrPRMCHRKXrqIPAhgd87Q$6oaBgb8MG2wnGIVcm43R12GS3UBtOXmmJpBVKqHHBpuoRd8GhZ6ZQ9wZsDTZndrM9IU0U3wz2cOwd7-XxIv$2NlBvFp1eltWjjb1srijlQ3G9bN+T6zV3u0cXZzL5Nlxc0iQT9LcdUvwrbhEykIm-oe$R1rzDmOMKOpbGLBFY0+pK7trVVhq5w4pYqgIX3kOvISdy+hR5JwDSUb$nV4Iyt+0sicIRm7bmAjp4jQRaZ4vZYM6ObZ9dHHmZ1cHYBaDXdlH5YuuB8t0KTEnZtCnuSVTWe+mb-PTzi7C7Nz6tA-EHSkizc9BeamSqD9N+05T35LAG+-gP-HFjryz6Gxu02q1z6RS4mRcS6Tkqi0l66ImQ-F0kUXyOPrU2IppZj0GkdyOZ5jtAWSFaBOtKAr1YhSHQk7$MmmxRoEuU6ug7e8TMVGDInX6lGZCnsaaguxH723lzHj$iurQaGE64evHSqLo$jxEykkVB7XNroZWjHw6RD9r6KApqxbeB$+TISimwNOaxkAwEJyCl18vJmnwvpkZFRZAz5dHbTl7l-UjU$iFliDPCamBxz2NxeRUBT3xOHkr-$",
+  "status": 200,
+  "ct": "text/plain; charset=UTF-8",
+  "body": ""
+ },
+ {
+  "page": "https://ljresidentialgroup.com/about",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/about",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/services",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/services",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/testimonials",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/testimonials",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/testimonials",
+  "method": "POST",
+  "path": "/api-nv/graphql",
+  "req": "{\"query\":\"\\n  query Testimonials (\\n    $companyId: String\\n    $agentId: ID\\n    $teamId: ID\\n    $testimonialIds: [ID!]\\n    $offset: Int\\n    $limit: Int\\n    $sort: String\\n    $sortDir: String\\n    $search: String\\n  ) {\\n    testimonials (\\n      companyId: $companyId\\n      agentId: $agentId\\n      teamId: $teamId\\n      testimonialIds: $testimonialIds\\n      offset: $offset\\n      limit: $limit\\n      sort: $sort\\n      sortDir: $sortDir\\n      search: $search\\n    ) {\\n      items {\\n        id\\n        testimonialId\\n        body\\n        author\\n        position\\n        media {\\n          smallUrl\\n          mediumUrl\\n          largeUrl\\n          xLargeUrl\\n          xxLargeUrl\\n          height\\n          width\\n          altTagText\\n        }\\n        seoTitle\\n        seoDescription\\n        agents {\\n          slug\\n          email\\n          firstName\\n          lastName\\n          avatar {\\n            smallUrl\\n            height\\n            width\\n          }\\n        }\\n      }\\n      total\\n    }\\n  }\\n\",\"variables\":{\"sort\":\"createdAt\",\"limit\":4,\"sortDir\":\"DESC\",\"companyId\":\"eb047ee6-f832-47b0-a1c3-06080d72144e\",\"offset\":0}}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"data\":{\"testimonials\":{\"items\":[{\"id\":\"49927dc1-9fe0-4f22-aea3-d40d37859638\",\"testimonialId\":\"49927dc1-9fe0-4f22-aea3-d40d37859638\",\"body\":\"Being first-time home buyers, we had A LOT of questions.  LJ clearly and patiently answered every single one.\\n\\nEven though we kept hearing how slow the real estate market was, we found ourselves in a multiple offer situation.  LJ was able to avoid a bidding war and coached us to put our best foot forward - and we got the house!  Simply put, we would not be in our amazing home if it wasn't for the guidance and support LJ gave us.\\n\\nI have been telling all of my friends and co-workers about LJ!\",\"author\":\"Brandon G\",\"position\":null,\"media\":null,\"seoTitle\":\"First Time Home Buyer\",\"seoDescription\":\"Being first-time home buyers, we had A LOT of questions.  LJ clearly and patiently answered every single one.\",\"agents\":[{\"slug\":\"lawrence-stemberg\",\"email\":\"lj@ljresidentialgroup.com\",\"firstName\":\"LJ\",\"lastName\":\"Sternberg\",\"avatar\":{\"smallUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/https://media-production.lp-cdn.com/media/zv2jvvrhj7mdpmecvm8t\",\"height\":5182,\"width\":3456}}]},{\"id\":\"7ba2b6c8-4e82-48ce-ab76-94f77c35a11c\",\"testimonialId\":\"7ba2b6c8-4e82-48ce-ab76-94f77c35a11c\",\"body\":\"This review has taken me forever to write, because I wanted to make sure I adequately captured everything about my home buying experience with LJ Residential- and as you'll soon learn, that is a tall ask. Now, let me start by saying I'm not an easy person to please, and I rarely take the time to write reviews. But in LJ's case, I had to make an exception because his white glove service deserves to be celebrated.\\n\\nWhen I initially mentioned that I was casually starting my search for a home in Austin, TX, LJ treated me like a VIP from the get-go. Despite my assurances that I wasn't actually going to buy a house yet (famous last words), he gave me his undivided attention and made time every single day to sync up on his searches and discuss my preferences. His dedication and attentiveness truly blew me away.\\n\\nBut it wasn't just LJ's availability that impressed me; it was the way he walked me through every step of the home-buying process. As a first-time buyer, I wasn't well-versed in real estate jargon, but LJ patiently explained everything in plain English, ensuring that I understood what each term meant and what to expect. He even highlighted certain aspects of the process that might seem alarming but assured me they were no big deal. That level of transparency and guidance made me feel supported and empowered.\\n\\nHere's the thing about LJ: he goes above and beyond for his buyers. During our first inspection, I had some concerns about its thoroughness. Without missing a beat, LJ offered to call someone he knew to conduct a second inspection, and he insisted on footing the bill. He wanted me to have peace of mind, and that gesture spoke volumes about his commitment to his clients.\\n\\nBut that wasn't the only time LJ went the extra mile. When we couldn't locate the key to unlock the shed in the backyard to confirm it was in good shape on the interior, LJ didn't hesitate. He immediately went into problem-solving mode and found a way to get it open. It may seem like a small thing, but it demonstrated his willingness to do whatever it takes to ensure his buyers are taken care of.\\n\\nIn LJ, you'll find a realtor who is not only knowledgeable and professional but also caring and compassionate. His genuine desire to provide an exceptional experience shines through in everything he does. LJ is a true gem in the real estate industry, and I can't recommend him highly enough.\\n\\nSo, if you're a first-time home buyer in Austin, TX (or a home buying pro!), and you want someone who will treat you like their only client, patiently guide you through the process, and go to great lengths for your peace of mind, LJ is the realtor you've been searching for. Trust me, you won't be disappointed.\",\"author\":\"Murph H\",\"position\":null,\"media\":null,\"seoTitle\":null,\"seoDescription\":\"This review has taken me forever to write, because I wanted to make sure I adequately captured everything about my home buying experience with LJ Residential- and as you'll soon learn, that is a tall ask. Now, let me start by saying I'm not an easy person to please, and I rarely take the time to write reviews.\",\"agents\":[{\"slug\":\"lawrence-stemberg\",\"email\":\"lj@ljresidentialgroup.com\",\"firstName\":\"LJ\",\"lastName\":\"Sternberg\",\"avatar\":{\"smallUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/https://media-production.lp-cdn.com/media/zv2jvvrhj7mdpmecvm8t\",\"height\":5182,\"width\":3456}}]},{\"id\":\"27df7a4c-b1dd-48c0-b8b0-b5cd70cf5f0b\",\"testimonialId\":\"27df7a4c-b1dd-48c0-b8b0-b5cd70cf5f0b\",\"body\":\"I was overwhelmed trying to move my elderly parents closer to me from out of state.   LJ Residential was amazing helping me find the right property to accommodate their needs while also making the overall process as easy as possible.  Not only did LJ bring expertise in finding a property and getting the best price, he was also able to connect me with resources for financing and inspections that were equally patient and kind.  Thank you LJ for helping my family through this huge transition!!\",\"author\":\"Tarma G\",\"position\":null,\"media\":null,\"seoTitle\":\"Overwhelmed\",\"seoDescription\":\"I was overwhelmed trying to move my elderly parents closer to me from out of state.   LJ Residential was amazing helping me find the right property to accommodate their needs while also making the overall process as easy as possible.\",\"agents\":[{\"slug\":\"lawrence-stemberg\",\"email\":\"lj@ljresidentialgroup.com\",\"firstName\":\"LJ\",\"lastName\":\"Sternberg\",\"avatar\":{\"smallUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/https://media-production.lp-cdn.com/media/zv2jvvrhj7mdpmecvm8t\",\"height\":5182,\"width\":3456}}]},{\"id\":\"6d8d43b4-829a-4e66-80ab-cd2b1f7af261\",\"testimonialId\":\"6d8d43b4-829a-4e66-80ab-cd2b1f7af261\",\"body\":\"My co-worker worked with LJ last year and referred me to him when we needed to make the move to Austin for my work.  We didn't know where we wanted to live, so we really needed an Austin expert to help us understand the pros and cons of the city's countless neighborhoods and to navigate the competitive Austin market.\\n\\nIt was immediately clear that LJ knows his stuff - everything from school quality to traffic patterns to future construction - he was an invaluable source of knowledge during our search.\\n\\nUltimately, we chose a new construction property which was near completion.  LJ went above and beyond, ensuring the property was completed to the highest standards while we were still 200 miles away in Dallas.\\n\\nWe are so thankful we decided to work with LJ!\",\"author\":\"Tyler G\",\"position\":null,\"media\":null,\"seoTitle\":\"Out of Town Buyer\",\"seoDescription\":\"My co-worker worked with LJ last year and referred me to him when we needed to make the move to Austin for my work.  We didn't know where we wanted to live, so we really needed an Austin expert to help us understand the pros and cons of the city's countless neighborhoods and to navigate the competitive Austin market.\",\"agents\":[{\"slug\":\"lawrence-stemberg\",\"email\":\"lj@ljresidentialgroup.com\",\"firstName\":\"LJ\",\"lastName\":\"Sternberg\",\"avatar\":{\"smallUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/https://media-production.lp-cdn.com/media/zv2jvvrhj7mdpmecvm8t\",\"height\":5182,\"width\":3456}}]}],\"total\":16}}}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/home-valuation",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/home-valuation",
+  "method": "GET",
+  "path": "/api/v1/map",
+  "req": "",
+  "status": 200,
+  "ct": "text/html; charset=utf-8",
+  "body": ""
+ },
+ {
+  "page": "https://ljresidentialgroup.com/home-valuation",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/terms-and-conditions",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/terms-and-conditions",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/sitemap",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/sitemap",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/dmca-notice",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/dmca-notice",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties",
+  "method": "POST",
+  "path": "/api-gw/graphql",
+  "req": "{\"query\":\"query Properties($agentIds: [ID!], $teamIds: [ID!], $neighborhoodIds: [ID!], $officeIds: [ID!], $propertyId: ID, $companyId: String, $networkId: String, $network: Boolean, $statusId: String, $propertyIds: [ID!], $prioritizeIds: Boolean, $statusIds: [String!], $excludeStatusId: [String!], $neighborhoodId: String, $addressState: [String!], $addressCity: [String!], $relatedNeighborhoodPropertyId: String, $developmentId: String, $featuredListing: Boolean, $leaseProperty: Boolean, $search: String, $searchTermMode: SearchTermModeEnum, $globalProperty: Boolean, $archived: Boolean, $salesPriceGTE: Float, $salesPriceLTE: Float, $leasePriceGTE: Float, $leasePriceLTE: Float, $livingSpaceSizeGTE: Float, $livingSpaceSizeLTE: Float, $bathCountGTE: Float, $bathCountLTE: Float, $bedroomCountGTE: Float, $bedroomCountLTE: Float, $architectureStyle: String, $lifestyle: String, $propertyTypeId: String, $propertyTypeIds: [String!], $spaceTypeIds: [ID!], $tag: String, $backfillMLSResults: Boolean, $displayMLSListings: String, $hostname: String, $websiteId: ID, $backfillProviders: [String!], $backfillMLSListingIds: [String!], $backfillMLSAgentIds: [String!], $backfillMLSOfficeIds: [String!], $backfillBoundary: JSON, $openHouse: Boolean, $withGeo: Boolean, $advancedFilters: JSON, $seasonalPriceId: ID, $offset: Int, $limit: Int, $sort: String, $sortDir: SortDirectionEnum) {\\n  properties(\\n    agentIds: $agentIds\\n    teamIds: $teamIds\\n    propertyId: $propertyId\\n    propertyIds: $propertyIds\\n    prioritizeIds: $prioritizeIds\\n    companyId: $companyId\\n    network: $network\\n    networkId: $networkId\\n    statusId: $statusId\\n    statusIds: $statusIds\\n    excludeStatusId: $excludeStatusId\\n    neighborhoodId: $neighborhoodId\\n    neighborhoodIds: $neighborhoodIds\\n    officeIds: $officeIds\\n    addressState: $addressState\\n    addressCity: $addressCity\\n    developmentId: $developmentId\\n    featuredListing: $featuredListing\\n    leaseProperty: $leaseProperty\\n    search: $search\\n    searchTermMode: $searchTermMode\\n    salesPriceGTE: $salesPriceGTE\\n    salesPriceLTE: $salesPriceLTE\\n    leasePriceGTE: $leasePriceGTE\\n    leasePriceLTE: $leasePriceLTE\\n    livingSpaceSizeGTE: $livingSpaceSizeGTE\\n    livingSpaceSizeLTE: $livingSpaceSizeLTE\\n    bathCountGTE: $bathCountGTE\\n    bathCountLTE: $bathCountLTE\\n    bedroomCountGTE: $bedroomCountGTE\\n    bedroomCountLTE: $bedroomCountLTE\\n    architectureStyle: $architectureStyle\\n    lifestyle: $lifestyle\\n    propertyTypeId: $propertyTypeId\\n    propertyTypeIds: $propertyTypeIds\\n    spaceTypeIds: $spaceTypeIds\\n    tag: $tag\\n    archived: $archived\\n    globalProperty: $globalProperty\\n    withGeo: $withGeo\\n    openHouse: $openHouse\\n    displayMLSListings: $displayMLSListings\\n    advancedFilters: $advancedFilters\\n    seasonalPriceId: $seasonalPriceId\\n    relatedNeighborhoodPropertyId: $relatedNeighborhoodPropertyId\\n    backfillMLSResults: $backfillMLSResults\\n    hostname: $hostname\\n    websiteId: $websiteId\\n    backfillProviders: $backfillProviders\\n    backfillMLSListingIds: $backfillMLSListingIds\\n    backfillMLSAgentIds: $backfillMLSAgentIds\\n    backfillMLSOfficeIds: $backfillMLSOfficeIds\\n    backfillBoundary: $backfillBoundary\\n    offset: $offset\\n    limit: $limit\\n    sort: $sort\\n    sortDir: $sortDir\\n  ) {\\n    id\\n    slug\\n    name\\n    status\\n    priceUponRequest\\n    currency\\n    salesPrice\\n    reducedPrice\\n    isPasswordProtected\\n    leaseProperty\\n    leasePrice\\n    leasePeriod\\n    privateAddress\\n    fromMLS\\n    mlsId\\n    mlsLogo\\n    mlsAttribution\\n    openHouseHours\\n    fullAddress\\n    lotAreaSize\\n    lotAreaUnits\\n    media {\\n      smallUrl\\n      mediumUrl\\n      largeUrl\\n      xLargeUrl\\n      xxLargeUrl\\n      width\\n      height\\n      altTagText\\n    }\\n    bedroomCount\\n    bathCount\\n    soldDate\\n    livingSpaceSize\\n    livingSpaceUnits\\n    types {\\n      id\\n      name\\n    }\\n  }\\n  propertiesCount(\\n    agentIds: $agentIds\\n    teamIds: $teamIds\\n    propertyId: $propertyId\\n    propertyIds: $propertyIds\\n    prioritizeIds: $prioritizeIds\\n    companyId: $companyId\\n    network: $network\\n    networkId: $networkId\\n    statusId: $statusId\\n    statusIds: $statusIds\\n    excludeStatusId: $excludeStatusId\\n    neighborhoodId: $neighborhoodId\\n    neighborhoodIds: $neighborhoodIds\\n    officeIds: $officeIds\\n    addressState: $addressState\\n    addressCity: $addressCity\\n    developmentId: $developmentId\\n    featuredListing: $featuredListing\\n    leaseProperty: $leaseProperty\\n    search: $search\\n    searchTermMode: $searchTermMode\\n    salesPriceGTE: $salesPriceGTE\\n    salesPriceLTE: $salesPriceLTE\\n    leasePriceGTE: $leasePriceGTE\\n    leasePriceLTE: $leasePriceLTE\\n    livingSpaceSizeGTE: $livingSpaceSizeGTE\\n    livingSpaceSizeLTE: $livingSpaceSizeLTE\\n    bathCountGTE: $bathCountGTE\\n    bathCountLTE: $bathCountLTE\\n    bedroomCountGTE: $bedroomCountGTE\\n    bedroomCountLTE: $bedroomCountLTE\\n    architectureStyle: $architectureStyle\\n    lifestyle: $lifestyle\\n    propertyTypeId: $propertyTypeId\\n    propertyTypeIds: $propertyTypeIds\\n    spaceTypeIds: $spaceTypeIds\\n    tag: $tag\\n    archived: $archived\\n    globalProperty: $globalProperty\\n    withGeo: $withGeo\\n    openHouse: $openHouse\\n    displayMLSListings: $displayMLSListings\\n    advancedFilters: $advancedFilters\\n    seasonalPriceId: $seasonalPriceId\\n  ) {\\n    count\\n  }\\n}\",\"variables\":{\"limit\":6,\"order\":\"salesPrice\",\"offset\":0,\"sortDir\":\"DESC\",\"companyId\":\"eb047ee6-f832-47b0-a1c3-06080d72144e\",\"sort\":\"salesPrice\",\"statusIds\":[\"5f528253-abb7-484e-95c3-330269ac1105\",\"959c11cf-8655-4f91-874c-292b0ab7ea6b\",\"a0012964-4f51-4430-abf8-6547c5ab6441\",\"df04ccbe-4621-4140-a504-ee1a17430bb7\",\"88b4ace6-f39b-4b25-a051-8f6dba976833\",\"96031d77-bbe5-4de3-90d8-1e4e70de8ca8\"],\"websiteId\":\"71aacd14-3481-4783-80e1-262b681494de\"}}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"data\":{\"propertiesCount\":{\"count\":2},\"properties\":[{\"id\":\"d98ddf16-5bc5-4345-a344-f813244182e7\",\"slug\":\"4207-canyonside-trail\",\"name\":\"4207 Canyonside Trail \",\"status\":\"FOR_SALE\",\"priceUponRequest\":false,\"currency\":\"USD\",\"salesPrice\":850000,\"reducedPrice\":null,\"isPasswordProtected\":false,\"leaseProperty\":false,\"leasePrice\":null,\"leasePeriod\":\"MONTH\",\"privateAddress\":false,\"fromMLS\":false,\"lotAreaSize\":10332,\"lotAreaUnits\":\"SQUARE_FEET\",\"bedroomCount\":4,\"bathCount\":4,\"soldDate\":null,\"livingSpaceSize\":null,\"livingSpaceUnits\":\"SQUARE_FEET\",\"types\":[],\"mlsId\":null,\"fullAddress\":\"4207 Canyonside Trail, Austin, TX 78731\",\"mlsLogo\":null,\"mlsAttribution\":null,\"openHouseHours\":null,\"media\":[{\"smallUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=960/https://media-production.lp-cdn.com/media/vdta4vcfu1limwwvdruq\",\"mediumUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1280/https://media-production.lp-cdn.com/media/vdta4vcfu1limwwvdruq\",\"largeUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1920/https://media-production.lp-cdn.com/media/vdta4vcfu1limwwvdruq\",\"xLargeUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=2560/https://media-production.lp-cdn.com/media/vdta4vcfu1limwwvdruq\",\"xxLargeUrl\":\"https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85/https://media-production.lp-cdn.com/media/vdta4vcfu1limwwvdruq\",\"width\":3200,\"height\":2133,\"altTagText\":null}]},{\"id\":\"f185c1fd-61ac-4deb-914f-bedc4ab7334d\",\"slug\":\"9705-mountain-quail-rd-austin-tx-78758-9452890\",\"name\":\"9705 Mountain Quail RD\",\"status\":\"FOR_SALE\",\"priceUponRequest\":false,\"currency\":\"USD\",\"salesPrice\":495000,\"reducedPrice\":null,\"isPasswordProtected\":false,\"leaseProperty\":false,\"leasePrice\":null,\"leasePeriod\":\"MONTH\",\"privateAddress\":false,\"fromMLS\":false,\"lotAreaSize\":0.2057,\"lotAreaUnits\":\"ACRE\",\"bedroomCount\":3,\"bathCount\":2,\"soldDate\":null,\"livingSpaceSize\":\"1226\",\"livingSpaceUnits\":\"SQUARE_FEET\",\"types\":[{\"id\":\"9a70fec3-5946-4d04-9acb-74d98781f636\",\"name\":\"Residential\"}],\"mlsId\":null,\"fullAddress\":\"9705 Mountain Quail RD, Austin, TX 78758\",\"mlsLogo\":null,\"mlsAttribution\":null,\"openHouseHours\":null,\"media\":[{\"smallUrl\":\"https://dq1niho2427i9.cloudfront.net/eb047ee6-f832-47b0-a1c3-06080d72144e/300872114.jpg\",\"mediumUrl\":\"https://dq1niho2427i9.cloudfront.net/eb047ee6-f832-47b0-a1c3-06080d72144e/300872114.jpg\",\"largeUrl\":\"https://dq1niho2427i9.cloudfront.net/eb047ee6-f832-47b0-a1c3-06080d72144e/300872114.jpg\",\"xLargeUrl\":\"https://dq1niho2427i9.cloudfront.net/eb047ee6-f832-47b0-a1c3-06080d72144e/300872114.jpg\",\"xxLargeUrl\":\"https://dq1niho2427i9.cloudfront.net/eb047ee6-f832-47b0-a1c3-06080d72144e/300872114.jpg\",\"width\":1024,\"height\":768,\"altTagText\":\"Single-story brick house with a two-car garage, broad driveway, and large shade tree; a sign reads “For Lease.”\"}]}]}}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/2419-ashley-way-austin-tx-us-78744-7254772",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/2419-ashley-way-austin-tx-us-78744-7254772",
+  "method": "GET",
+  "path": "/api/v1/map",
+  "req": "",
+  "status": 200,
+  "ct": "text/html; charset=utf-8",
+  "body": ""
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/2419-ashley-way-austin-tx-us-78744-7254772",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/4207-canyonside-trail",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/4207-canyonside-trail",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/4207-canyonside-trail",
+  "method": "GET",
+  "path": "/api/v1/map",
+  "req": "",
+  "status": 200,
+  "ct": "text/html; charset=utf-8",
+  "body": ""
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/4405-tambre-bnd-austin-tx-78738-8821382",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/4405-tambre-bnd-austin-tx-78738-8821382",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/4405-tambre-bnd-austin-tx-78738-8821382",
+  "method": "GET",
+  "path": "/api/v1/map",
+  "req": "",
+  "status": 200,
+  "ct": "text/html; charset=utf-8",
+  "body": ""
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/9705-mountain-quail-rd-austin-tx-78758-9452890",
+  "method": "GET",
+  "path": "/api/v1/map",
+  "req": "",
+  "status": 200,
+  "ct": "text/html; charset=utf-8",
+  "body": ""
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/9705-mountain-quail-rd-austin-tx-78758-9452890",
+  "method": "POST",
+  "path": "/graphql",
+  "req": "{\"query\":\"\\n      query {\\n        validSession {\\n          success\\n        }\\n      }\\n    \"}",
+  "status": 200,
+  "ct": "application/json; charset=utf-8",
+  "body": "{\"errors\":[{\"message\":\"There isn't membership info in session.\",\"locations\":[{\"line\":3,\"column\":9}],\"path\":[\"validSession\"],\"extensions\":{\"code\":\"SESSION_NOT_FOUND\"}}],\"data\":null}"
+ },
+ {
+  "page": "https://ljresidentialgroup.com/properties/9705-mountain-quail-rd-austin-tx-78758-9452890",
+  "method": "GET",
+  "path": "/api-l/geo",
+  "req": "",
+  "status": 200,
+  "ct": "application/json",
+  "body": "{\"ipCity\":\"Columbus\",\"ipCountry\":\"US\",\"ipContinent\":\"NA\",\"ipLatitude\":\"39.96118\",\"ipLongitude\":\"-82.99879\",\"region\":\"Ohio\",\"regionCode\":\"OH\",\"metroCode\":\"535\",\"postalCode\":\"43215\",\"timezone\":\"America/New_York\"}"
+ }
+]
