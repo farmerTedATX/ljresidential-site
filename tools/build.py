@@ -136,6 +136,9 @@ def decode_cfemail(hexstr):
 # "Lawrence Sternberg" or "LJ Sternberg", but not the already-full Lawrence "LJ" Sternberg.
 NAME_RE = re.compile(r'(?<![\w"\u201c\u201d])(?:Lawrence|LJ)\s+Sternberg')
 
+NEIGHBORHOOD_COPY = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                              "..", "source", "copy", "neighborhoods.json")))
+
 FORM_NAMES = {"NEWSLETTER_SIGNUP": "newsletter", "CONTACT_INQUIRY": "contact", "HOME_VALUATION": "home-valuation"}
 
 
@@ -194,6 +197,24 @@ def transform(src):
     for sec in soup.select("section[id^=section-]"):
         if sec.select_one(".neighborhood-map") or sec.get_text(" ", strip=True).startswith("Start Your Home Search"):
             sec.decompose()
+
+    # Neighborhood pages: hero shows only the name; the white section gets the description
+    # from source/copy/neighborhoods.json (written 2026-11-04 at Lawrence's request).
+    canon = soup.select_one('link[rel=canonical]')
+    slug = (canon.get("href") or "").rstrip("/").rsplit("/neighborhoods/", 1)[-1] if canon else ""
+    if slug in NEIGHBORHOOD_COPY:
+        for el in soup.select(".text-container .short-description"):
+            el.decompose()
+        body = soup.select_one('section .advanced-editor[data-schema="description"]')
+        if body is not None:
+            body.clear()
+            for para in NEIGHBORHOOD_COPY[slug]:
+                tag = soup.new_tag("p", attrs={"style": "margin:0 0 1.1em;"})
+                tag.string = para
+                body.append(tag)
+        summary = NEIGHBORHOOD_COPY[slug][0]
+        for el in soup.select('meta[name=description], meta[property="og:description"], meta[name="twitter:description"]'):
+            el["content"] = summary
 
     # The hero video has no audio track, so its speaker (mute) icon does nothing. Hidden at
     # Lawrence's request (2026-11-04).
@@ -308,6 +329,14 @@ def build_api(rec_path):
         body = URL_RE.sub(lambda m: local_url(m.group(0)), r["body"])
         if op == "Properties":
             body = drop_properties(body, HIDDEN_PROPERTIES)
+        if op == "Neighborhoods":
+            data = json.loads(body)
+            for n in ((data.get("data") or {}).get("neighborhoods") or {}).get("items") or []:
+                paras = NEIGHBORHOOD_COPY.get(n.get("slug"))
+                if paras:
+                    n["description"] = "".join("<p>%s</p>" % html.escape(t) for t in paras)
+                    n["descriptionShort"] = paras[0]
+            body = json.dumps(data)
         out.append({"path": path, "op": op, "page": page, "ct": r["ct"], "body": body})
     os.makedirs(os.path.join(OUT, "data"), exist_ok=True)
     json.dump(out, open(os.path.join(OUT, "data", "api.json"), "w"))
